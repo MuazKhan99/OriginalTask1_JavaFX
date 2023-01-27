@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Import the necessary JavaFX classes -->
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- Use a VBox to layout the elements vertically -->
+<VBox alignment="CENTER" spacing="10.0" fx:controller="com.example.scenebuildertask.Controller" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <!-- Use an HBox to layout the elements horizontally -->
+        <HBox spacing="10.0">
+            <children>
+                <Label text="Server IP:"/>
+                <TextField fx:id="serverIPField"/>
+            </children>
+        </HBox>
+        <HBox spacing="10.0">
+            <children>
+                <Label text="Server Port:"/>
+                <TextField fx:id="serverPortField"/>
+            </children>
+        </HBox>
+        <HBox spacing="10.0">
+            <children>
+                <Label text="Message:"/>
+                <TextField fx:id="messageField"/>
+                <Button text="Send" onAction="#handleSendButtonAction"/>
+            </children>
+        </HBox>
+        <TextArea fx:id="outputArea" editable="false" prefHeight="200.0" prefWidth="200.0"/>
+    </children>
+</VBox>
